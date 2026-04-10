@@ -44,7 +44,7 @@ const Quiz = () => {
               placeholder="Digite seu nome aqui"
               value={nameInput}
               onChange={setNameInput}
-              onNext={() => { setUserName(nameInput); goTo(3); }}
+              onNext={() => { setUserName(nameInput.trim()); goTo(3); }}
             />
           )}
           {step === 3 && (
@@ -61,7 +61,7 @@ const Quiz = () => {
               placeholder="Ex: Medicina, Direito, Engenharia..."
               value={courseInput}
               onChange={setCourseInput}
-              onNext={() => { setCourse(courseInput); goTo(5); }}
+              onNext={() => { setCourse(courseInput.trim()); goTo(5); }}
             />
           )}
           {step === 5 && (
@@ -237,7 +237,7 @@ const Step7 = ({ onNext }: { onNext: () => void }) => (
       </div>
       <div className="flex flex-col gap-2">
         <img src="https://i.ibb.co/dwsM6j87/2.webp" alt="" className="w-full aspect-[3/4] object-cover rounded-xl" />
-        <img src="https://i.ibb.co/dwsM6j87/2.webp" alt="" className="w-full aspect-[3/4] object-cover rounded-xl" />
+        <img src="https://i.ibb.co/yjBjYmn/4.webp" alt="" className="w-full aspect-[3/4] object-cover rounded-xl" />
       </div>
     </div>
     <p className="text-muted-foreground text-sm">
@@ -339,6 +339,11 @@ const Step16 = ({ userName, course }: { userName: string; course: string }) => {
 
   return (
     <div className="animate-slide-in flex flex-col gap-5 text-center">
+      <img
+        src="https://i.ibb.co/MyXWjkRY/fotoresult.webp"
+        alt="Resultado"
+        className="w-full aspect-[3/4] object-cover rounded-2xl"
+      />
       <h2 className="text-xl font-bold text-foreground leading-tight">
         <span className="glow-text">{userName}</span>, seu perfil é de: Estética Sofisticada ✨
       </h2>
@@ -347,12 +352,7 @@ const Step16 = ({ userName, course }: { userName: string; course: string }) => {
         <span className="glow-text">{course}</span>{" "}
         exigem fotos que transmitam autoridade, brilho e a grandiosidade da sua formatura. Conseguimos liberar para você a tecnologia de alta fidelidade que antes era restrita apenas às grandes marcas.
       </p>
-      <img
-        src="https://i.ibb.co/MyXWjkRY/fotoresult.webp"
-        alt="Resultado"
-        className="w-full aspect-[3/4] object-cover rounded-2xl"
-      />
-      <QuizButton href="https://studioluna.site">Quero saber como →</QuizButton>
+      <QuizButton href="https://studioluna.site">Resgatar meu ensaio exclusivo →</QuizButton>
     </div>
   );
 };
