@@ -177,7 +177,7 @@ const Quiz = () => {
 const Step1 = ({ onNext }: { onNext: () => void }) => (
   <div className="flex flex-col items-center gap-5 text-center">
     <h1 className="text-2xl font-bold text-foreground leading-tight">
-      Sua conquista merece mais do que fotos comuns.
+      Sua conquista merece muito mais do fotos básicas!
     </h1>
     <p className="text-muted-foreground text-sm">
       Responda esse rápido quiz e descubra o estilo de ensaio que melhor eterniza essa sua linda trajetória.
