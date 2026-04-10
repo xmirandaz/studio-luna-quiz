@@ -15,6 +15,10 @@ export default {
     extend: {
       colors: {
         border: "hsl(var(--border))",
+        quiz: {
+          purple: "#9B30FF",
+          dark: "#0c0f14",
+        },
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
