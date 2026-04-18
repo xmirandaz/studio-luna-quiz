@@ -167,6 +167,12 @@ const Quiz = () => {
           )}
           {step === 16 && <Step16 userName={userName} course={course} />}
         </div>
+
+        <footer className="mt-10 text-center text-[10px] text-muted-foreground leading-relaxed">
+          2026 © CNPJ: 65.135.920/0001-62
+          <br />
+          Studio Luna. Todos os direitos reservados.
+        </footer>
       </div>
     </div>
   );
