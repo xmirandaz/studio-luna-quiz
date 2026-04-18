@@ -406,7 +406,7 @@ const Step16 = ({ userName, course, onNext }: { userName: string; course: string
   return (
     <div className="animate-slide-in flex flex-col gap-5 text-center">
       <img
-        src="https://i.ibb.co/MyXWjkRY/fotoresult.webp"
+        src="https://i.ibb.co/5g9PJ2FZ/resultado.webp"
         alt="Resultado"
         className="w-full aspect-[3/4] object-cover rounded-2xl"
       />
