@@ -190,7 +190,8 @@ const Quiz = () => {
               onSelect={(o) => autoAdvance(o, 18)}
             />
           )}
-          {step === 18 && <Step16 userName={userName} course={course} />}
+          {step === 18 && <Step16 userName={userName} course={course} onNext={() => goTo(19)} />}
+          {step === 19 && <PricingCards userName={userName} />}
         </div>
 
         <footer className="mt-10 text-center text-[10px] text-muted-foreground leading-relaxed">
