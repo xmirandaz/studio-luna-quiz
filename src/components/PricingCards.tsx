@@ -1,4 +1,6 @@
 import { Crown } from "lucide-react";
+import { useEffect } from "react";
+import confetti from "canvas-confetti";
 
 interface Pkg {
   id: string;
@@ -32,7 +34,7 @@ const packages: Pkg[] = [
     name: "PACOTE PREMIUM",
     emoji: "🥇",
     price: "R$49,90",
-    features: ["📸 5 Fotos em Alta Definição", "👥 +2 Pessoas Adicionadas", "⏳ Entrega Expressa (48 Horas)"],
+    features: ["📸 5 Fotos em Alta Definição", "👥 +2 Pessoas Adicionadas", "⚡ Entrega VIP (24 Horas)"],
     cta: "QUERO ESTE AGORA",
     highlight: true,
   },
@@ -47,6 +49,25 @@ const packages: Pkg[] = [
 ];
 
 const PricingCards = ({ userName }: { userName: string }) => {
+  useEffect(() => {
+    const colors = ["#9b30ff", "#3b82f6", "#10b981", "#fbbf24"];
+    const fire = (originX: number) =>
+      confetti({
+        particleCount: 80,
+        spread: 70,
+        startVelocity: 45,
+        origin: { x: originX, y: 0.3 },
+        colors,
+      });
+    fire(0.2);
+    fire(0.5);
+    fire(0.8);
+    const t = setTimeout(() => {
+      confetti({ particleCount: 120, spread: 100, origin: { y: 0.4 }, colors });
+    }, 400);
+    return () => clearTimeout(t);
+  }, []);
+
   const buildLink = (pkgName: string) => {
     const msg = `Olá, meu nome é ${userName || "[seu nome]"}! Fiz o quiz e escolhi o ${pkgName}`;
     return `https://wa.me/5511921824150?text=${encodeURIComponent(msg)}`;
