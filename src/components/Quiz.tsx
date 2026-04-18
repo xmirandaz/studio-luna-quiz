@@ -26,10 +26,10 @@ const Quiz = () => {
     setTimeout(() => goTo(nextStep), 300);
   };
 
-  const showProgress = step >= 2 && step <= 15;
-  // Steps 2-15 map to progress 1-14 out of 14
+  const showProgress = step >= 2 && step <= 17;
+  // Steps 2-17 map to progress 1-16 out of 16
   const progressStep = step - 1;
-  const progressTotal = 14;
+  const progressTotal = 16;
 
   return (
     <div className="quiz-gradient min-h-screen flex flex-col items-center">
