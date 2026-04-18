@@ -13,6 +13,7 @@ const Quiz = () => {
   const [courseInput, setCourseInput] = useState("");
   const [selected, setSelected] = useState("");
   const [animKey, setAnimKey] = useState(0);
+  const [pain, setPain] = useState<"ead" | "preco" | "tempo" | "vergonha" | "">("");
 
   const goTo = useCallback((s: number) => {
     setSelected("");
