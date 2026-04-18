@@ -277,6 +277,40 @@ const Step7 = ({ onNext }: { onNext: () => void }) => (
   </div>
 );
 
+const Step9 = ({ pain, userName, onNext }: { pain: string; userName: string; onNext: () => void }) => {
+  const variants: Record<string, { title: string; body: string; img: string }> = {
+    ead: {
+      title: `${userName}, nós te entendemos: sua conquista merece ser celebrada.`,
+      body: "A Claudia também sentia que faltava o registro oficial por ter feito EAD. Veja a reação dela e de sua mãe ao ver que o Studio Luna realizou esse sonho sem ela sair de casa!",
+      img: "https://i.ibb.co/TMHS7XF8/ead.webp",
+    },
+    preco: {
+      title: `${userName}, nós te entendemos: você não precisa pagar uma fortuna por uma foto incrível.`,
+      body: "A Anelise estava indignada com os preços abusivos das agências tradicionais. Olha só o alívio dela ao descobrir nossa tecnologia!",
+      img: "https://i.ibb.co/ccw5n443/caro.webp",
+    },
+    tempo: {
+      title: `${userName}, nós te entendemos: seu tempo é valioso demais para ser perdido em estúdios.`,
+      body: "O Rogério vive na correria e não podia perder um dia inteiro com fotos. Confira o feedback dele sobre a praticidade do nosso processo!",
+      img: "https://i.ibb.co/PzG5DN1f/tempo.webp",
+    },
+    vergonha: {
+      title: `${userName}, nós te entendemos: a foto perfeita é aquela em que você se sente confiante.`,
+      body: "A Andréia sempre travava na frente das câmeras e odiava fazer poses. Veja como a nossa IA devolveu a autoestima dela com naturalidade!",
+      img: "https://i.ibb.co/Y7sqBhmm/vergonha.webp",
+    },
+  };
+  const v = variants[pain] ?? variants.ead;
+  return (
+    <div className="flex flex-col gap-5 text-center">
+      <h2 className="text-xl font-bold text-foreground leading-tight">{v.title}</h2>
+      <p className="text-muted-foreground text-sm">{v.body}</p>
+      <img src={v.img} alt="Print de conversa" className="w-full h-auto rounded-2xl" />
+      <QuizButton onClick={onNext}>Explicar minhas preferências →</QuizButton>
+    </div>
+  );
+};
+
 const Step12 = ({ onNext }: { onNext: () => void }) => (
   <div className="flex flex-col gap-5 text-center">
     <h2 className="text-xl font-bold text-foreground">
