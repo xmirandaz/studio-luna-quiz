@@ -352,7 +352,7 @@ const Step16 = ({ userName, course }: { userName: string; course: string }) => {
         <span className="glow-text">{course}</span>{" "}
         exigem fotos que transmitam autoridade, brilho e a grandiosidade da sua formatura. Conseguimos liberar para você a tecnologia de alta fidelidade que antes era restrita apenas às grandes marcas.
       </p>
-      <QuizButton href="https://studioluna.site">Resgatar meu ensaio exclusivo →</QuizButton>
+      <QuizButton href="https://studioluna.site/formatura10">Resgatar meu ensaio exclusivo →</QuizButton>
     </div>
   );
 };
