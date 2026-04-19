@@ -40,7 +40,7 @@ const packages: Pkg[] = [
   },
   {
     id: "diamante",
-    name: "PACOTE DIAMANTE",
+    name: "PACOTE DELUXE",
     emoji: "💎",
     price: "R$69,90",
     features: ["📸 10 Fotos em Alta Definição", "👨‍👩‍👧‍👦 +3 Pessoas (Família completa)", "⚡ Entrega VIP (24 Horas)"],
