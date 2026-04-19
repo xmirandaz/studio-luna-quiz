@@ -53,6 +53,7 @@ const PricingCards = ({ userName }: { userName: string }) => {
   const ctaRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
     const colors = ["#9b30ff", "#3b82f6", "#10b981", "#fbbf24"];
     const fire = (originX: number) =>
       confetti({
