@@ -414,9 +414,7 @@ const Step16 = ({ userName, course, onNext }: { userName: string; course: string
         <span className="glow-text">{userName}</span>, seu perfil é de: Estética Sofisticada ✨
       </h2>
       <p className="text-muted-foreground text-sm leading-relaxed">
-        Você não se contenta com o &lsquo;médio&rsquo;. Seu perfil e a importância do seu curso de{" "}
-        <span className="glow-text">{course}</span>{" "}
-        exigem fotos que transmitam autoridade, brilho e a grandiosidade da sua formatura. Conseguimos liberar para você a tecnologia de alta fidelidade que antes era restrita apenas às grandes marcas.
+        <span className="glow-text">{userName}</span>, sua vaga está segura por <strong className="font-bold text-foreground">APENAS UMA HORA</strong>. Converse o quanto antes com o Especialista para garantir sua vaga com essas ofertas!
       </p>
       <QuizButton onClick={onNext}>Resgatar meu ensaio exclusivo →</QuizButton>
     </div>
