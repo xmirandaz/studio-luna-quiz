@@ -40,7 +40,7 @@ const packages: Pkg[] = [
   },
   {
     id: "diamante",
-    name: "PACOTE DIAMANTE",
+    name: "PACOTE DELUXE",
     emoji: "💎",
     price: "R$69,90",
     features: ["📸 10 Fotos em Alta Definição", "👨‍👩‍👧‍👦 +3 Pessoas (Família completa)", "⚡ Entrega VIP (24 Horas)"],
@@ -53,6 +53,7 @@ const PricingCards = ({ userName }: { userName: string }) => {
   const ctaRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
     const colors = ["#9b30ff", "#3b82f6", "#10b981", "#fbbf24"];
     const fire = (originX: number) =>
       confetti({
@@ -93,7 +94,7 @@ const PricingCards = ({ userName }: { userName: string }) => {
           Escolha o pacote ideal para o seu ensaio ✨
         </h2>
         <p className="text-muted-foreground text-sm mt-2">
-          Oferta exclusiva e por tempo limitado para você, {userName || "formando(a)"}.
+          {userName || "formando(a)"}, sua vaga está segura por <strong className="text-foreground font-bold">APENAS UMA HORA</strong>. Converse o quanto antes com o Especialista para garantir sua vaga com essas ofertas!
         </p>
       </div>
 
