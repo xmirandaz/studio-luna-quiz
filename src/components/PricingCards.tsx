@@ -15,7 +15,7 @@ interface Pkg {
 const packages: Pkg[] = [
   {
     id: "basico",
-    name: "PACOTE BÁSICO",
+    name: "PACOTE BASIC",
     emoji: "🥉",
     price: "R$14,90",
     features: ["📸 1 Foto em Alta Definição", "❌ Sem adição de pessoas", "⏱️ Entrega em 3 dias úteis"],
