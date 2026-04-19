@@ -94,7 +94,7 @@ const PricingCards = ({ userName }: { userName: string }) => {
           Escolha o pacote ideal para o seu ensaio ✨
         </h2>
         <p className="text-muted-foreground text-sm mt-2">
-          Oferta exclusiva e por tempo limitado para você, {userName || "formando(a)"}.
+          {userName || "formando(a)"}, sua vaga está segura por <strong className="font-bold text-foreground">APENAS UMA HORA</strong>. Converse o quanto antes com o Especialista para garantir sua vaga com essas ofertas!
         </p>
       </div>
 
